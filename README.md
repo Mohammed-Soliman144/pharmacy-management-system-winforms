@@ -178,7 +178,11 @@ PharmacySystem/
 ```
 
 ---
+## 📷 Screenshots
 
+
+
+---
 ## 🛠️ Database Setup
 
 1. Open SQL Server
@@ -246,8 +250,8 @@ Feel free to fork and improve the system.
 
 ## 📬 Contact
 
-* GitHub: [your-profile]
-* LinkedIn: [your-link]
+* GitHub: [Mohammed Soliman Github](https://github.com/Mohammed-Soliman144?tab=repositories)
+* LinkedIn: [Muhammad Soliman Linkedin](https://www.linkedin.com/in/muhammad-soliman144/)
 
 ---
 

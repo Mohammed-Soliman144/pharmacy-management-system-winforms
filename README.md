@@ -246,8 +246,8 @@ Feel free to fork and improve the system.
 
 ## 📬 Contact
 
-* GitHub: ![Mohammed Soliman Github](https://github.com/Mohammed-Soliman144?tab=repositories)
-* LinkedIn: ![Muhammad Soliman Linkedin](https://www.linkedin.com/in/muhammad-soliman144/)
+* GitHub: [Mohammed Soliman Github](https://github.com/Mohammed-Soliman144?tab=repositories)
+* LinkedIn: [Muhammad Soliman Linkedin](https://www.linkedin.com/in/muhammad-soliman144/)
 
 ---
 

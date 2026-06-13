@@ -1,0 +1,946 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{51EC9901-8D68-4D49-8E4D-E72D6D27E46B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PharmacySystemV20._0._1</RootNamespace>
+    <AssemblyName>PharmacySystemV20.0.1</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BAL\CLS_BuyBill.cs" />
+    <Compile Include="BAL\CLS_BuyDetails.cs" />
+    <Compile Include="BAL\CLS_CustomerAccount.cs" />
+    <Compile Include="BAL\CLS_ItemDosageForm.cs" />
+    <Compile Include="BAL\CLS_Branches.cs" />
+    <Compile Include="BAL\CLS_Companies.cs" />
+    <Compile Include="BAL\CLS_Customers.cs" />
+    <Compile Include="BAL\CLS_Databases.cs" />
+    <Compile Include="BAL\CLS_Exceptions.cs" />
+    <Compile Include="BAL\CLS_ItemClassOfActions.cs" />
+    <Compile Include="BAL\CLS_ItemCompanies.cs" />
+    <Compile Include="BAL\CLS_ItemGenerics.cs" />
+    <Compile Include="BAL\CLS_ItemGroups.cs" />
+    <Compile Include="BAL\CLS_ItemOperations.cs" />
+    <Compile Include="BAL\CLS_ItemPlaces.cs" />
+    <Compile Include="BAL\CLS_Items.cs" />
+    <Compile Include="BAL\CLS_ItemUnits.cs" />
+    <Compile Include="BAL\CLS_POS.cs" />
+    <Compile Include="BAL\CLS_POSDetails.cs" />
+    <Compile Include="BAL\CLS_ReBuyBill.cs" />
+    <Compile Include="BAL\CLS_Register.cs" />
+    <Compile Include="BAL\CLS_ReSaleBill.cs" />
+    <Compile Include="BAL\CLS_Rules.cs" />
+    <Compile Include="BAL\CLS_SaleDetails.cs" />
+    <Compile Include="BAL\CLS_SaleBill.cs" />
+    <Compile Include="BAL\CLS_Stores.cs" />
+    <Compile Include="BAL\CLS_SupplierAccount.cs" />
+    <Compile Include="BAL\CLS_Suppliers.cs" />
+    <Compile Include="BAL\CLS_Users.cs" />
+    <Compile Include="DAL\CLS_ConnectionDB.cs" />
+    <Compile Include="PAL\FRM_Branches.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\FRM_Branches.Designer.cs">
+      <DependentUpon>FRM_Branches.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\FRM_BranchSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\FRM_BranchSearch.Designer.cs">
+      <DependentUpon>FRM_BranchSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\FRM_Companies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\FRM_Companies.Designer.cs">
+      <DependentUpon>FRM_Companies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\FRM_CompanySearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\FRM_CompanySearch.Designer.cs">
+      <DependentUpon>FRM_CompanySearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\FRM_Rules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\FRM_Rules.Designer.cs">
+      <DependentUpon>FRM_Rules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\FRM_Customers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\FRM_Customers.Designer.cs">
+      <DependentUpon>FRM_Customers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\FRM_CustomerSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\FRM_CustomerSearch.Designer.cs">
+      <DependentUpon>FRM_CustomerSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\FRM_ItemCompanies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\FRM_ItemCompanies.Designer.cs">
+      <DependentUpon>FRM_ItemCompanies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\FRM_Payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\FRM_Payment.Designer.cs">
+      <DependentUpon>FRM_Payment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\FRM_PointOfSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\FRM_PointOfSales.Designer.cs">
+      <DependentUpon>FRM_PointOfSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\FRM_ItemGroups.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\FRM_ItemGroups.Designer.cs">
+      <DependentUpon>FRM_ItemGroups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\FRM_Intro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\FRM_Intro.Designer.cs">
+      <DependentUpon>FRM_Intro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\FRM_ItemClassOfActions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\FRM_ItemClassOfActions.Designer.cs">
+      <DependentUpon>FRM_ItemClassOfActions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\FRM_ItemDosageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\FRM_ItemDosageForm.Designer.cs">
+      <DependentUpon>FRM_ItemDosageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\FRM_ItemGenerics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\FRM_ItemGenerics.Designer.cs">
+      <DependentUpon>FRM_ItemGenerics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\FRM_ItemPlaces.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\FRM_ItemPlaces.Designer.cs">
+      <DependentUpon>FRM_ItemPlaces.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\FRM_Items.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\FRM_Items.Designer.cs">
+      <DependentUpon>FRM_Items.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\FRM_ItemSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\FRM_ItemSearch.Designer.cs">
+      <DependentUpon>FRM_ItemSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\FRM_ItemUnits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\FRM_ItemUnits.Designer.cs">
+      <DependentUpon>FRM_ItemUnits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\FRM_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\FRM_Login.Designer.cs">
+      <DependentUpon>FRM_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\FRM_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\FRM_Main.Designer.cs">
+      <DependentUpon>FRM_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\FRM_Resales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\FRM_Resales.Designer.cs">
+      <DependentUpon>FRM_Resales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\FRM_ResalesSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\FRM_ResalesSearch.Designer.cs">
+      <DependentUpon>FRM_ResalesSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\FRM_SalesSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\FRM_SalesSearch.Designer.cs">
+      <DependentUpon>FRM_SalesSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\FRM_Sales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\FRM_Sales.Designer.cs">
+      <DependentUpon>FRM_Sales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\FRM_Purchases.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\FRM_Purchases.Designer.cs">
+      <DependentUpon>FRM_Purchases.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\FRM_RepurchasesSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\FRM_RepurchasesSearch.Designer.cs">
+      <DependentUpon>FRM_RepurchasesSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\FRM_Repurchases.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\FRM_Repurchases.Designer.cs">
+      <DependentUpon>FRM_Repurchases.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\FRM_PurchasesSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\FRM_PurchasesSearch.Designer.cs">
+      <DependentUpon>FRM_PurchasesSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\FRM_Server.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\FRM_Server.Designer.cs">
+      <DependentUpon>FRM_Server.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\FRM_Stores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\FRM_Stores.Designer.cs">
+      <DependentUpon>FRM_Stores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\FRM_StoreSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\FRM_StoreSearch.Designer.cs">
+      <DependentUpon>FRM_StoreSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\FRM_CustomerAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\FRM_CustomerAccount.Designer.cs">
+      <DependentUpon>FRM_CustomerAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\FRM_SupplierAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\FRM_SupplierAccount.Designer.cs">
+      <DependentUpon>FRM_SupplierAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\FRM_SupplierArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\FRM_SupplierArea.Designer.cs">
+      <DependentUpon>FRM_SupplierArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\FRM_SupplierGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\FRM_SupplierGroup.Designer.cs">
+      <DependentUpon>FRM_SupplierGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\FRM_Suppliers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\FRM_Suppliers.Designer.cs">
+      <DependentUpon>FRM_Suppliers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\FRM_SupplierSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\FRM_SupplierSearch.Designer.cs">
+      <DependentUpon>FRM_SupplierSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\FRM_SupplierSize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\FRM_SupplierSize.Designer.cs">
+      <DependentUpon>FRM_SupplierSize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\FRM_UserJob.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\FRM_UserJob.Designer.cs">
+      <DependentUpon>FRM_UserJob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\FRM_Users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\FRM_Users.Designer.cs">
+      <DependentUpon>FRM_Users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\FRM_Notifications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\FRM_Notifications.Designer.cs">
+      <DependentUpon>FRM_Notifications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PAL\FRM_UserSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PAL\FRM_UserSearch.Designer.cs">
+      <DependentUpon>FRM_UserSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\FRM_ResalesViewerRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPT\FRM_ResalesViewerRpt.Designer.cs">
+      <DependentUpon>FRM_ResalesViewerRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\FRM_SalesViewerRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPT\FRM_SalesViewerRpt.Designer.cs">
+      <DependentUpon>FRM_SalesViewerRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\FRM_RepurchasesViewerRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPT\FRM_RepurchasesViewerRpt.Designer.cs">
+      <DependentUpon>FRM_RepurchasesViewerRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\FRM_PurchasesViewerRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPT\FRM_PurchasesViewerRpt.Designer.cs">
+      <DependentUpon>FRM_PurchasesViewerRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\FRM_CustAccountViewerRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPT\FRM_CustAccountViewerRpt.Designer.cs">
+      <DependentUpon>FRM_CustAccountViewerRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\FRM_SupAccountViewerRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPT\FRM_SupAccountViewerRpt.Designer.cs">
+      <DependentUpon>FRM_SupAccountViewerRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\ResalesRpt.cs">
+      <DependentUpon>ResalesRpt.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RPT\SalesRpt.cs">
+      <DependentUpon>SalesRpt.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RPT\RepurchasesRpt.cs">
+      <DependentUpon>RepurchasesRpt.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RPT\PurchasesRpt.cs">
+      <DependentUpon>PurchasesRpt.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RPT\CustAccountRpt.cs">
+      <DependentUpon>CustAccountRpt.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RPT\SupAccountRpt.cs">
+      <DependentUpon>SupAccountRpt.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RPT\ItemsRpt.cs">
+      <DependentUpon>ItemsRpt.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RPT\CustomersRpt.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomersRpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\FRM_BranchesViewerRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPT\FRM_BranchesViewerRpt.Designer.cs">
+      <DependentUpon>FRM_BranchesViewerRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\FRM_CompaniesViewerRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPT\FRM_CompaniesViewerRpt.Designer.cs">
+      <DependentUpon>FRM_CompaniesViewerRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\FRM_CustomersViewerRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPT\FRM_CustomersViewerRpt.Designer.cs">
+      <DependentUpon>FRM_CustomersViewerRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\FRM_ItemsViewerRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPT\FRM_ItemsViewerRpt.Designer.cs">
+      <DependentUpon>FRM_ItemsViewerRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\FRM_StoresViewerRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPT\FRM_StoresViewerRpt.Designer.cs">
+      <DependentUpon>FRM_StoresViewerRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\FRM_SuppliersViewerRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPT\FRM_SuppliersViewerRpt.Designer.cs">
+      <DependentUpon>FRM_SuppliersViewerRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\FRM_UsersViewerRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPT\FRM_UsersViewerRpt.Designer.cs">
+      <DependentUpon>FRM_UsersViewerRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\BranchesRpt.cs">
+      <DependentUpon>BranchesRpt.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RPT\TemplateRptNormal.cs">
+      <DependentUpon>TemplateRptNormal.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RPT\BranchSelectedRpt.cs">
+      <DependentUpon>BranchSelectedRpt.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RPT\CompanySelectedRpt.cs">
+      <DependentUpon>CompanySelectedRpt.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RPT\TemplateRptSelection.cs">
+      <DependentUpon>TemplateRptSelection.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RPT\StoreSelectedRpt.cs">
+      <DependentUpon>StoreSelectedRpt.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RPT\SupplierSelectedRpt.cs">
+      <DependentUpon>SupplierSelectedRpt.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RPT\StoresRpt.cs">
+      <DependentUpon>StoresRpt.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RPT\SuppliersRpt.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SuppliersRpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\UserSelectedRpt.cs">
+      <DependentUpon>UserSelectedRpt.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RPT\UsersRpt.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UsersRpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <EmbeddedResource Include="PAL\FRM_Branches.resx">
+      <DependentUpon>FRM_Branches.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\FRM_BranchSearch.resx">
+      <DependentUpon>FRM_BranchSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\FRM_Companies.resx">
+      <DependentUpon>FRM_Companies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\FRM_CompanySearch.resx">
+      <DependentUpon>FRM_CompanySearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\FRM_Rules.resx">
+      <DependentUpon>FRM_Rules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\FRM_Customers.resx">
+      <DependentUpon>FRM_Customers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\FRM_CustomerSearch.resx">
+      <DependentUpon>FRM_CustomerSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\FRM_Intro.resx">
+      <DependentUpon>FRM_Intro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\FRM_ItemClassOfActions.resx">
+      <DependentUpon>FRM_ItemClassOfActions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\FRM_ItemCompanies.resx">
+      <DependentUpon>FRM_ItemCompanies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\FRM_ItemDosageForm.resx">
+      <DependentUpon>FRM_ItemDosageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\FRM_Payment.resx">
+      <DependentUpon>FRM_Payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\FRM_PointOfSales.resx">
+      <DependentUpon>FRM_PointOfSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\FRM_ItemGenerics.resx">
+      <DependentUpon>FRM_ItemGenerics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\FRM_ItemGroups.resx">
+      <DependentUpon>FRM_ItemGroups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\FRM_ItemPlaces.resx">
+      <DependentUpon>FRM_ItemPlaces.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\FRM_Items.resx">
+      <DependentUpon>FRM_Items.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\FRM_ItemSearch.resx">
+      <DependentUpon>FRM_ItemSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\FRM_ItemUnits.resx">
+      <DependentUpon>FRM_ItemUnits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\FRM_Login.resx">
+      <DependentUpon>FRM_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\FRM_Main.resx">
+      <DependentUpon>FRM_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\FRM_Resales.resx">
+      <DependentUpon>FRM_Resales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\FRM_ResalesSearch.resx">
+      <DependentUpon>FRM_ResalesSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\FRM_SalesSearch.resx">
+      <DependentUpon>FRM_SalesSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\FRM_Sales.resx">
+      <DependentUpon>FRM_Sales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\FRM_Purchases.resx">
+      <DependentUpon>FRM_Purchases.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\FRM_RepurchasesSearch.resx">
+      <DependentUpon>FRM_RepurchasesSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\FRM_Repurchases.resx">
+      <DependentUpon>FRM_Repurchases.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\FRM_PurchasesSearch.resx">
+      <DependentUpon>FRM_PurchasesSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\FRM_Server.resx">
+      <DependentUpon>FRM_Server.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\FRM_Stores.resx">
+      <DependentUpon>FRM_Stores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\FRM_StoreSearch.resx">
+      <DependentUpon>FRM_StoreSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\FRM_CustomerAccount.resx">
+      <DependentUpon>FRM_CustomerAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\FRM_SupplierAccount.resx">
+      <DependentUpon>FRM_SupplierAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\FRM_SupplierArea.resx">
+      <DependentUpon>FRM_SupplierArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\FRM_SupplierGroup.resx">
+      <DependentUpon>FRM_SupplierGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\FRM_Suppliers.resx">
+      <DependentUpon>FRM_Suppliers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\FRM_SupplierSearch.resx">
+      <DependentUpon>FRM_SupplierSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\FRM_SupplierSize.resx">
+      <DependentUpon>FRM_SupplierSize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\FRM_UserJob.resx">
+      <DependentUpon>FRM_UserJob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\FRM_Users.resx">
+      <DependentUpon>FRM_Users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\FRM_Notifications.resx">
+      <DependentUpon>FRM_Notifications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PAL\FRM_UserSearch.resx">
+      <DependentUpon>FRM_UserSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\FRM_ResalesViewerRpt.resx">
+      <DependentUpon>FRM_ResalesViewerRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\FRM_SalesViewerRpt.resx">
+      <DependentUpon>FRM_SalesViewerRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\FRM_RepurchasesViewerRpt.resx">
+      <DependentUpon>FRM_RepurchasesViewerRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\FRM_PurchasesViewerRpt.resx">
+      <DependentUpon>FRM_PurchasesViewerRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\FRM_CustAccountViewerRpt.resx">
+      <DependentUpon>FRM_CustAccountViewerRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\FRM_SupAccountViewerRpt.resx">
+      <DependentUpon>FRM_SupAccountViewerRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\SalesRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SalesRpt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\RepurchasesRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RepurchasesRpt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\PurchasesRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PurchasesRpt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\CustAccountRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CustAccountRpt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\SupAccountRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SupAccountRpt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\ItemsRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ItemsRpt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\CustomersRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CustomersRpt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\FRM_BranchesViewerRpt.resx">
+      <DependentUpon>FRM_BranchesViewerRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\FRM_CompaniesViewerRpt.resx">
+      <DependentUpon>FRM_CompaniesViewerRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\FRM_CustomersViewerRpt.resx">
+      <DependentUpon>FRM_CustomersViewerRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\FRM_ItemsViewerRpt.resx">
+      <DependentUpon>FRM_ItemsViewerRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\FRM_StoresViewerRpt.resx">
+      <DependentUpon>FRM_StoresViewerRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\FRM_SuppliersViewerRpt.resx">
+      <DependentUpon>FRM_SuppliersViewerRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\FRM_UsersViewerRpt.resx">
+      <DependentUpon>FRM_UsersViewerRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\BranchesRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BranchesRpt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\TemplateRptNormal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TemplateRptNormal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\BranchSelectedRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BranchSelectedRpt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\CompanySelectedRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CompanySelectedRpt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\TemplateRptSelection.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TemplateRptSelection.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\StoreSelectedRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StoreSelectedRpt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\SupplierSelectedRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SupplierSelectedRpt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\StoresRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StoresRpt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\SuppliersRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SuppliersRpt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\UserSelectedRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>UserSelectedRpt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\UsersRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>UsersRpt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="RPT\ResalesRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ResalesRpt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="RSC\UserinfoPic.png" />
+    <None Include="RSC\Visiable.ico" />
+    <None Include="RSC\Accounts.ico" />
+    <None Include="RSC\Admin.ico" />
+    <None Include="RSC\Building.ico" />
+    <None Include="RSC\Button.ico" />
+    <None Include="RSC\Buyers.ico" />
+    <None Include="RSC\Card.ico" />
+    <None Include="RSC\Add.ico" />
+    <None Include="RSC\AdminPic.png" />
+    <None Include="RSC\CancelNew.ico" />
+    <None Include="RSC\ClientsPic.png" />
+    <None Include="RSC\BranchesPic.png" />
+    <None Include="RSC\BackupPic.png" />
+    <None Include="RSC\CellPhonePic.png" />
+    <None Include="RSC\AddPic.png" />
+    <None Include="RSC\AddIco.ico" />
+    <None Include="RSC\Add.png" />
+    <None Include="RSC\BankAccounts.ico" />
+    <None Include="RSC\BankAccount.png" />
+    <None Include="RSC\Cash.png" />
+    <None Include="RSC\BuyPic.png" />
+    <None Include="RSC\BuySearchPic.png" />
+    <Content Include="RSC\Close.ico" />
+    <None Include="RSC\Database.ico" />
+    <None Include="RSC\Inventory.ico" />
+    <None Include="RSC\Edit.ico" />
+    <None Include="RSC\Delete.ico" />
+    <None Include="RSC\Exit.ico" />
+    <None Include="RSC\Erease.ico" />
+    <None Include="RSC\Invisible.ico" />
+    <None Include="RSC\Folder.ico" />
+    <None Include="RSC\Folder.png" />
+    <None Include="RSC\icons8_print_40px.png" />
+    <None Include="RSC\Display.png" />
+    <None Include="RSC\Disable Client.png" />
+    <None Include="RSC\Enable Client.png" />
+    <None Include="RSC\Items.png" />
+    <None Include="RSC\CompanyPic.png" />
+    <None Include="RSC\FileDisactive.png" />
+    <None Include="RSC\FileActive.png" />
+    <None Include="RSC\DatabasePic.png" />
+    <None Include="RSC\EyeVisiblePic.png" />
+    <None Include="RSC\EyeInvisiblePic.png" />
+    <None Include="RSC\ClosePic.png" />
+    <None Include="RSC\DeletePic.png" />
+    <None Include="RSC\ItemsPic.png" />
+    <None Include="RSC\Delete.png" />
+    <None Include="RSC\DeleteButton.png" />
+    <None Include="RSC\Close.png" />
+    <None Include="RSC\DeleteSize.png" />
+    <None Include="RSC\DeleteIco.ico" />
+    <None Include="RSC\Info.ico" />
+    <None Include="RSC\InfoIcon.ico" />
+    <None Include="RSC\DeleteRowIco.ico" />
+    <None Include="RSC\DeleteRowsIco.ico" />
+    <None Include="RSC\icons8_print_48px.png" />
+    <None Include="RSC\CustomerLedger.png" />
+    <Content Include="RSC\Maximize.ico" />
+    <None Include="RSC\Microdata Pharmacy.png" />
+    <None Include="RSC\Microdata Logo.png" />
+    <Content Include="RSC\Minimize.ico" />
+    <None Include="RSC\Nevigate.ico" />
+    <None Include="RSC\Reports.ico" />
+    <None Include="RSC\Sales.ico" />
+    <None Include="RSC\Settings.ico" />
+    <None Include="RSC\Store.ico" />
+    <None Include="RSC\Save.ico" />
+    <None Include="RSC\Search Google.ico" />
+    <None Include="RSC\Select.ico" />
+    <None Include="RSC\Print.ico" />
+    <None Include="RSC\SuppliersPic.png" />
+    <None Include="RSC\PlusColored.ico" />
+    <None Include="RSC\Plus.ico" />
+    <None Include="RSC\StoresPic.png" />
+    <None Include="RSC\SaveSettings.png" />
+    <None Include="RSC\RestorePic.png" />
+    <None Include="RSC\SecurityPic.png" />
+    <None Include="RSC\PasswordPic.png" />
+    <None Include="RSC\NonHidePic.png" />
+    <None Include="RSC\PharmacyPic.png" />
+    <None Include="RSC\PlusPic.png" />
+    <None Include="RSC\Update.png" />
+    <None Include="RSC\Save.png" />
+    <None Include="RSC\Search.png" />
+    <None Include="RSC\Purchase.png" />
+    <None Include="RSC\POS.png" />
+    <None Include="RSC\PointOfSale.png" />
+    <None Include="RSC\SupplierLedgerFRM.png" />
+    <None Include="RSC\SupplierLedger.png" />
+    <None Include="RSC\Payment.png" />
+    <None Include="RSC\Payments.png" />
+    <None Include="RSC\Reefresh.png" />
+    <None Include="RSC\UltraSearch.png" />
+    <None Include="RSC\Repurchases.png" />
+    <None Include="RSC\RebuyPic.png" />
+    <None Include="RSC\RebuySearchPic.png" />
+    <None Include="RSC\Settings.png" />
+    <None Include="RSC\SettingsInfo.png" />
+    <None Include="RSC\SalesPic.png" />
+    <None Include="RSC\Resales.png" />
+    <None Include="RSC\ResalesPic.png" />
+    <Content Include="RSC\User.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

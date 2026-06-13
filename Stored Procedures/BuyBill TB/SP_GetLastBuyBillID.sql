@@ -1,0 +1,5 @@
+CREATE PROC SP_GetLastBuyBillID
+
+AS
+
+SELECT ISNULL(MAX(BuyBillID) + 1, 1) FROM BuyBill;

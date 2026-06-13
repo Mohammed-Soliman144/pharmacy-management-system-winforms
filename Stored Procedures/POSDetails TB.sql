@@ -1,0 +1,5 @@
+CREATE PROC SP_GetLastPOSDetailID
+
+AS
+
+SELECT ISNULL(MAX(POSDetailID) + 1, 1) FROM POSDetails;

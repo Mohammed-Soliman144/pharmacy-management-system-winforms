@@ -1,0 +1,5 @@
+CREATE PROC SP_GetLastItemID
+
+AS
+
+SELECT ISNULL(MAX(ItemID) +1, 1) FROM Items;

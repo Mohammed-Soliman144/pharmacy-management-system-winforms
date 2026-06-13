@@ -178,7 +178,11 @@ PharmacySystem/
 ```
 
 ---
+## 📷 Screenshots
 
+
+
+---
 ## 🛠️ Database Setup
 
 1. Open SQL Server

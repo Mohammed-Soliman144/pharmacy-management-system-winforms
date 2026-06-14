@@ -179,8 +179,15 @@ PharmacySystem/
 
 ---
 ## 📷 Screenshots
-
-
+![Main Form](/assets/MainForm.png)
+![Intro Sales](/assets/IntroSalesForm.png)
+![Purchases Form](/assets/PurchasesInvForm.png)
+![Purchases Form 1](/assets/PurchasesInvForm-1.png)
+![Intro Sales Form](/assets/IntroSalesForm.png)
+![Search Sales Form](/assets/SearchSalesInvForm.png)
+![Database Backup Form](/assets/DatabaseBackupForm.png)
+![Database Backup Form 1](/assets/DatabaseBackupForm-1.png)
+![Database Backup Form 2](/assets/DatabaseBackupForm-2.png)
 
 ---
 ## 🛠️ Database Setup
